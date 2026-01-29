@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StudyWithUs | Complete Study Hub - Notes, Mind Maps & Summaries</title>
-  <meta name="description" content="StudyWithUs is Pakistan's first complete study hub where you get notes, mind maps, and summaries for all subjects in one place. 10+ subjects, free samples, and premium study materials.">
+  <title>StudyWithUs | Grade 9 to University - Complete Study Hub</title>
+  <meta name="description" content="Study materials for all levels: Grade 9-10, Intermediate (11-12), and University (Graduation). Notes, Mind Maps, Summaries, Past Papers, and Digital Resources.">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -20,14 +20,19 @@
       --primary: #2c3e50;
       --secondary: #3498db;
       --accent: #2ecc71;
+      --science: #3498db;
+      --commerce: #9b59b6;
+      --arts: #e74c3c;
+      --university: #f39c12;
       --light: #ecf0f1;
       --dark: #2c3e50;
       --gray: #7f8c8d;
       --yellow: #f1c40f;
       --transition: all 0.3s ease;
       --shadow: 0 5px 15px rgba(0,0,0,0.1);
-      --border-radius: 10px;
-      --border-radius-sm: 5px;
+      --shadow-lg: 0 10px 30px rgba(0,0,0,0.15);
+      --border-radius: 12px;
+      --border-radius-sm: 8px;
     }
     
     /* Reset & Base */
@@ -103,9 +108,9 @@
       left: 50%;
       transform: translateX(-50%);
       width: 80px;
-      height: 3px;
+      height: 4px;
       background: linear-gradient(90deg, var(--secondary), var(--accent));
-      border-radius: 3px;
+      border-radius: 2px;
     }
     
     .section-title p {
@@ -115,12 +120,46 @@
       margin: 0 auto;
     }
     
+    /* Level Badges */
+    .level-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+    
+    .level-9-10 {
+      background: linear-gradient(135deg, #3498db, #2980b9);
+      color: white;
+    }
+    
+    .level-11-12 {
+      background: linear-gradient(135deg, #9b59b6, #8e44ad);
+      color: white;
+    }
+    
+    .level-university {
+      background: linear-gradient(135deg, #f39c12, #d35400);
+      color: white;
+    }
+    
+    .level-all {
+      background: linear-gradient(135deg, #2ecc71, #27ae60);
+      color: white;
+    }
+    
+    /* Buttons */
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      padding: 12px 30px;
+      padding: 14px 32px;
       background: linear-gradient(135deg, var(--secondary), var(--accent));
       color: white;
       border: none;
@@ -152,7 +191,7 @@
     }
     
     .btn-small {
-      padding: 8px 20px;
+      padding: 10px 24px;
       font-size: 0.85rem;
     }
     
@@ -184,7 +223,7 @@
     .logo {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       font-family: 'Montserrat', sans-serif;
       font-size: 1.8rem;
       font-weight: 700;
@@ -230,7 +269,7 @@
     .nav-links .cta-btn {
       background: linear-gradient(135deg, var(--secondary), var(--accent));
       color: white;
-      padding: 10px 25px;
+      padding: 12px 28px;
       border-radius: var(--border-radius-sm);
       margin-left: 15px;
     }
@@ -255,8 +294,8 @@
     
     /* Hero Section */
     .hero {
-      background: linear-gradient(135deg, rgba(44, 62, 80, 0.9), rgba(52, 152, 219, 0.9)), 
-                  url('https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=1600') center/cover no-repeat;
+      background: linear-gradient(135deg, rgba(44, 62, 80, 0.92), rgba(52, 152, 219, 0.92)), 
+                  url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=1600') center/cover no-repeat;
       color: white;
       text-align: center;
       padding: 180px 0 120px;
@@ -271,9 +310,17 @@
     
     .hero p {
       font-size: 1.2rem;
-      max-width: 700px;
+      max-width: 800px;
       margin: 0 auto 40px;
       color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .level-tags {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
     }
     
     .hero-btns {
@@ -293,43 +340,140 @@
       color: var(--primary);
     }
     
-    /* Features Section */
-    .features {
+    /* Levels Section */
+    .levels {
       background-color: white;
     }
     
-    .features-grid {
+    .levels-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap: 30px;
     }
     
-    .feature-card {
+    .level-card {
       background-color: white;
-      padding: 40px 30px;
       border-radius: var(--border-radius);
+      overflow: hidden;
       box-shadow: var(--shadow);
-      text-align: center;
       transition: var(--transition);
-      border-top: 4px solid transparent;
+      position: relative;
+      border-top: 5px solid transparent;
     }
     
-    .feature-card:hover {
+    .level-card:hover {
       transform: translateY(-10px);
-      border-top-color: var(--secondary);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      box-shadow: var(--shadow-lg);
     }
     
-    .feature-card i {
+    .level-card.grade-9-10 {
+      border-top-color: var(--science);
+    }
+    
+    .level-card.intermediate {
+      border-top-color: var(--commerce);
+    }
+    
+    .level-card.university {
+      border-top-color: var(--university);
+    }
+    
+    .level-header {
+      padding: 30px;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(52, 152, 219, 0.1), rgba(46, 204, 113, 0.1));
+    }
+    
+    .level-card.intermediate .level-header {
+      background: linear-gradient(135deg, rgba(155, 89, 182, 0.1), rgba(142, 68, 173, 0.1));
+    }
+    
+    .level-card.university .level-header {
+      background: linear-gradient(135deg, rgba(243, 156, 18, 0.1), rgba(211, 84, 0, 0.1));
+    }
+    
+    .level-header i {
       font-size: 3rem;
-      color: var(--secondary);
       margin-bottom: 20px;
     }
     
-    .feature-card h3 {
-      font-size: 1.5rem;
+    .level-card.grade-9-10 .level-header i {
+      color: var(--science);
+    }
+    
+    .level-card.intermediate .level-header i {
+      color: var(--commerce);
+    }
+    
+    .level-card.university .level-header i {
+      color: var(--university);
+    }
+    
+    .level-header h3 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+    
+    .level-content {
+      padding: 30px;
+    }
+    
+    .subjects-list {
+      margin-bottom: 25px;
+    }
+    
+    .subjects-list h4 {
+      font-size: 1.2rem;
       margin-bottom: 15px;
       color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .subjects-list h4 i {
+      color: var(--secondary);
+    }
+    
+    .subject-category {
+      margin-bottom: 20px;
+    }
+    
+    .subject-category h5 {
+      font-size: 1rem;
+      color: var(--gray);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .subject-category ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    
+    .subject-category li {
+      padding: 6px 12px;
+      background-color: #f5f7fa;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    
+    .level-card.grade-9-10 .subject-category li {
+      background-color: rgba(52, 152, 219, 0.1);
+      color: var(--science);
+    }
+    
+    .level-card.intermediate .subject-category li {
+      background-color: rgba(155, 89, 182, 0.1);
+      color: var(--commerce);
+    }
+    
+    .level-card.university .subject-category li {
+      background-color: rgba(243, 156, 18, 0.1);
+      color: var(--university);
     }
     
     /* Subjects Section */
@@ -345,28 +489,64 @@
       flex-wrap: wrap;
     }
     
-    .subject-btn {
-      padding: 10px 25px;
+    .filter-btn {
+      padding: 12px 28px;
       background-color: white;
       border: 2px solid #e0e6ed;
       border-radius: 30px;
       cursor: pointer;
       transition: var(--transition);
-      font-weight: 500;
+      font-weight: 600;
       color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
     
-    .subject-btn.active,
-    .subject-btn:hover {
+    .filter-btn.active,
+    .filter-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+    
+    .filter-btn.all.active,
+    .filter-btn.all:hover {
       background: linear-gradient(135deg, var(--secondary), var(--accent));
       border-color: var(--secondary);
       color: white;
-      transform: translateY(-2px);
+    }
+    
+    .filter-btn.science.active,
+    .filter-btn.science:hover {
+      background: linear-gradient(135deg, var(--science), #2980b9);
+      border-color: var(--science);
+      color: white;
+    }
+    
+    .filter-btn.commerce.active,
+    .filter-btn.commerce:hover {
+      background: linear-gradient(135deg, var(--commerce), #8e44ad);
+      border-color: var(--commerce);
+      color: white;
+    }
+    
+    .filter-btn.arts.active,
+    .filter-btn.arts:hover {
+      background: linear-gradient(135deg, var(--arts), #c0392b);
+      border-color: var(--arts);
+      color: white;
+    }
+    
+    .filter-btn.university.active,
+    .filter-btn.university:hover {
+      background: linear-gradient(135deg, var(--university), #d35400);
+      border-color: var(--university);
+      color: white;
     }
     
     .subjects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 25px;
     }
     
@@ -381,7 +561,7 @@
     
     .subject-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      box-shadow: var(--shadow-lg);
     }
     
     .subject-card.featured {
@@ -410,7 +590,6 @@
     
     .subject-header i {
       font-size: 2.5rem;
-      color: var(--secondary);
       margin-bottom: 15px;
     }
     
@@ -428,7 +607,7 @@
     }
     
     .subject-details li {
-      padding: 8px 0;
+      padding: 10px 0;
       border-bottom: 1px solid #f5f5f5;
       color: var(--gray);
       display: flex;
@@ -441,7 +620,7 @@
       font-size: 0.9rem;
     }
     
-    .subject-price {
+    .subject-footer {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -460,98 +639,77 @@
       font-weight: normal;
     }
     
-    /* How It Works Section */
-    .process {
+    /* Features Section */
+    .features {
       background-color: white;
     }
     
-    .process-steps {
+    .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
-      position: relative;
     }
     
-    .process-steps:before {
-      content: '';
-      position: absolute;
-      top: 40px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: linear-gradient(90deg, var(--secondary), var(--accent));
-      z-index: 0;
-    }
-    
-    @media (max-width: 768px) {
-      .process-steps:before {
-        display: none;
-      }
-    }
-    
-    .step {
+    .feature-card {
+      background-color: white;
+      padding: 40px 30px;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
       text-align: center;
-      position: relative;
-      z-index: 1;
+      transition: var(--transition);
+      border-top: 4px solid transparent;
     }
     
-    .step-number {
-      width: 80px;
-      height: 80px;
-      background: linear-gradient(135deg, var(--secondary), var(--accent));
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      font-weight: 700;
-      margin: 0 auto 25px;
-      box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+    .feature-card:hover {
+      transform: translateY(-10px);
+      border-top-color: var(--secondary);
+      box-shadow: var(--shadow-lg);
     }
     
-    .step h3 {
-      font-size: 1.3rem;
+    .feature-card i {
+      font-size: 3rem;
+      color: var(--secondary);
+      margin-bottom: 20px;
+    }
+    
+    .feature-card h3 {
+      font-size: 1.5rem;
       margin-bottom: 15px;
       color: var(--primary);
     }
     
-    /* Testimonials Section */
+    /* Testimonials */
     .testimonials {
       background-color: #f8fafc;
     }
     
-    .testimonials-slider {
-      max-width: 800px;
-      margin: 0 auto;
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
     }
     
     .testimonial-card {
       background-color: white;
-      padding: 40px;
+      padding: 30px;
       border-radius: var(--border-radius);
       box-shadow: var(--shadow);
-      margin: 20px;
+      transition: var(--transition);
+    }
+    
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
     }
     
     .testimonial-content {
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: var(--gray);
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       font-style: italic;
       position: relative;
-      padding-left: 30px;
-    }
-    
-    .testimonial-content:before {
-      content: '"';
-      position: absolute;
-      left: 0;
-      top: -10px;
-      font-size: 4rem;
-      color: var(--secondary);
-      opacity: 0.2;
-      font-family: serif;
+      padding-left: 20px;
+      border-left: 3px solid var(--secondary);
     }
     
     .testimonial-author {
@@ -561,11 +719,16 @@
     }
     
     .author-avatar {
-      width: 60px;
-      height: 60px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
-      overflow: hidden;
-      border: 3px solid var(--secondary);
+      background: linear-gradient(135deg, var(--secondary), var(--accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 600;
+      font-size: 1.2rem;
     }
     
     .author-info h4 {
@@ -578,10 +741,19 @@
       font-size: 0.9rem;
     }
     
+    .stars {
+      color: var(--yellow);
+      margin-top: 5px;
+    }
+    
     /* Pricing Section */
+    .pricing {
+      background-color: white;
+    }
+    
     .pricing-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 30px;
     }
     
@@ -597,7 +769,7 @@
     
     .pricing-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      box-shadow: var(--shadow-lg);
     }
     
     .pricing-card.popular {
@@ -666,7 +838,7 @@
       color: var(--accent);
     }
     
-    /* Free Resources Section */
+    /* Free Resources */
     .free-resources {
       background: linear-gradient(135deg, rgba(44, 62, 80, 0.95), rgba(52, 152, 219, 0.95)), 
                   url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1600') center/cover no-repeat;
@@ -716,110 +888,6 @@
     
     .form-group input::placeholder {
       color: rgba(255, 255, 255, 0.6);
-    }
-    
-    /* FAQ Section */
-    .faq {
-      background-color: white;
-    }
-    
-    .faq-container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    
-    .faq-item {
-      margin-bottom: 15px;
-      border-radius: var(--border-radius-sm);
-      overflow: hidden;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-    }
-    
-    .faq-question {
-      padding: 20px;
-      background-color: #f8fafc;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-weight: 600;
-      color: var(--primary);
-    }
-    
-    .faq-question i {
-      transition: var(--transition);
-    }
-    
-    .faq-answer {
-      padding: 0 20px;
-      max-height: 0;
-      overflow: hidden;
-      transition: var(--transition);
-      background-color: white;
-    }
-    
-    .faq-item.active .faq-question i {
-      transform: rotate(180deg);
-    }
-    
-    .faq-item.active .faq-answer {
-      padding: 20px;
-      max-height: 500px;
-    }
-    
-    /* Contact Section */
-    .contact {
-      background-color: #f8fafc;
-    }
-    
-    .contact-wrapper {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-    }
-    
-    .contact-info h3 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-      color: var(--primary);
-    }
-    
-    .contact-details {
-      margin-top: 30px;
-    }
-    
-    .contact-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 15px;
-      margin-bottom: 25px;
-    }
-    
-    .contact-item i {
-      font-size: 1.2rem;
-      color: var(--secondary);
-      margin-top: 5px;
-    }
-    
-    .contact-form input,
-    .contact-form textarea,
-    .contact-form select {
-      width: 100%;
-      padding: 15px;
-      margin-bottom: 20px;
-      border: 1px solid #e0e6ed;
-      border-radius: var(--border-radius-sm);
-      background-color: white;
-      font-family: 'Poppins', sans-serif;
-      transition: var(--transition);
-    }
-    
-    .contact-form input:focus,
-    .contact-form textarea:focus,
-    .contact-form select:focus {
-      border-color: var(--secondary);
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
     }
     
     /* Footer */
@@ -912,10 +980,6 @@
     
     /* Responsive Design */
     @media (max-width: 992px) {
-      .contact-wrapper {
-        grid-template-columns: 1fr;
-      }
-      
       .hero h1 {
         font-size: 2.8rem;
       }
@@ -926,6 +990,10 @@
       
       .pricing-card.popular:hover {
         transform: translateY(-10px);
+      }
+      
+      .levels-grid {
+        grid-template-columns: 1fr;
       }
     }
     
@@ -1013,6 +1081,11 @@
       .resources-form {
         padding: 30px 20px;
       }
+      
+      .filter-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
@@ -1032,13 +1105,12 @@
         
         <ul class="nav-links" id="navLinks">
           <li><a href="#home">Home</a></li>
-          <li><a href="#features">Features</a></li>
+          <li><a href="#levels">Education Levels</a></li>
           <li><a href="#subjects">Subjects</a></li>
           <li><a href="#pricing">Pricing</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#free-resources" class="cta-btn">Free Samples</a></li>
+          <li><a href="#free-resources">Free Samples</a></li>
+          <li><a href="#contact" class="cta-btn">Contact Us</a></li>
         </ul>
       </nav>
     </div>
@@ -1047,58 +1119,193 @@
   <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="container">
-      <h1>All-in-One Study Hub: Notes, Mind Maps & Summaries</h1>
-      <p>Pakistan's first complete study platform where you get premium quality study materials for all subjects in one place. 10+ subjects, professionally designed notes, visual mind maps, and concise summaries.</p>
+      <h1>Complete Study Materials from Grade 9 to University</h1>
+      <p>Your one-stop solution for premium quality study materials across all education levels in Pakistan. Notes, Mind Maps, Summaries, Past Papers, and Digital Resources.</p>
+      
+      <div class="level-tags">
+        <span class="level-badge level-9-10">Grade 9-10 (Matric)</span>
+        <span class="level-badge level-11-12">Intermediate (FSc/FA)</span>
+        <span class="level-badge level-university">University (Graduation)</span>
+      </div>
+      
       <div class="hero-btns">
-        <a href="#subjects" class="btn"><i class="fas fa-book-open"></i> Browse Subjects</a>
-        <a href="#free-resources" class="btn btn-outline"><i class="fas fa-download"></i> Free Samples</a>
+        <a href="#levels" class="btn"><i class="fas fa-layer-group"></i> Browse All Levels</a>
+        <a href="#free-resources" class="btn btn-outline"><i class="fas fa-download"></i> Get Free Samples</a>
       </div>
     </div>
   </section>
 
-  <!-- Features Section -->
-  <section class="features section-padding" id="features">
+  <!-- Levels Section -->
+  <section class="levels section-padding" id="levels">
     <div class="container">
       <div class="section-title">
-        <h2>Why Choose StudyWithUs?</h2>
-        <p>We provide everything you need for exam preparation in one comprehensive package</p>
+        <h2>Education Levels</h2>
+        <p>Study materials tailored for every stage of your academic journey</p>
       </div>
       
-      <div class="features-grid">
-        <div class="feature-card">
-          <i class="fas fa-book"></i>
-          <h3>Detailed Notes</h3>
-          <p>Comprehensive, well-organized notes covering entire syllabus with key points highlighted.</p>
+      <div class="levels-grid">
+        <!-- Grade 9-10 Card -->
+        <div class="level-card grade-9-10">
+          <div class="level-header">
+            <i class="fas fa-school"></i>
+            <h3>Grade 9 & 10 (Matric)</h3>
+            <p>Complete syllabus coverage for SSC/Matriculation</p>
+          </div>
+          <div class="level-content">
+            <div class="subjects-list">
+              <h4><i class="fas fa-book"></i> Subjects Offered</h4>
+              
+              <div class="subject-category">
+                <h5>Science Group</h5>
+                <ul>
+                  <li>Physics</li>
+                  <li>Chemistry</li>
+                  <li>Biology</li>
+                  <li>Mathematics</li>
+                  <li>Computer Science</li>
+                  <li>English</li>
+                  <li>Urdu</li>
+                  <li>Pakistan Studies</li>
+                  <li>Islamiat</li>
+                </ul>
+              </div>
+              
+              <div class="subject-category">
+                <h5>General Group</h5>
+                <ul>
+                  <li>General Science</li>
+                  <li>General Math</li>
+                  <li>Computer</li>
+                  <li>Home Economics</li>
+                  <li>Economics</li>
+                </ul>
+              </div>
+            </div>
+            
+            <a href="#subjects" class="btn" style="width: 100%;">
+              <i class="fas fa-search"></i> Browse Grade 9-10 Subjects
+            </a>
+          </div>
         </div>
         
-        <div class="feature-card">
-          <i class="fas fa-project-diagram"></i>
-          <h3>Visual Mind Maps</h3>
-          <p>Color-coded mind maps to visualize complex topics and improve memory retention.</p>
+        <!-- Intermediate Card -->
+        <div class="level-card intermediate">
+          <div class="level-header">
+            <i class="fas fa-university"></i>
+            <h3>Intermediate (FSc/FA)</h3>
+            <p>Pre-Engineering, Pre-Medical, Commerce & Arts Groups</p>
+          </div>
+          <div class="level-content">
+            <div class="subjects-list">
+              <h4><i class="fas fa-book"></i> Subjects Offered</h4>
+              
+              <div class="subject-category">
+                <h5>Pre-Engineering</h5>
+                <ul>
+                  <li>Physics</li>
+                  <li>Chemistry</li>
+                  <li>Mathematics</li>
+                  <li>English</li>
+                  <li>Urdu</li>
+                  <li>Pakistan Studies</li>
+                  <li>Islamiat</li>
+                </ul>
+              </div>
+              
+              <div class="subject-category">
+                <h5>Pre-Medical</h5>
+                <ul>
+                  <li>Physics</li>
+                  <li>Chemistry</li>
+                  <li>Biology</li>
+                  <li>English</li>
+                  <li>Urdu</li>
+                  <li>Pakistan Studies</li>
+                  <li>Islamiat</li>
+                </ul>
+              </div>
+              
+              <div class="subject-category">
+                <h5>Commerce/ICS</h5>
+                <ul>
+                  <li>Accounting</li>
+                  <li>Economics</li>
+                  <li>Business Studies</li>
+                  <li>Computer Science</li>
+                  <li>Mathematics</li>
+                  <li>Statistics</li>
+                </ul>
+              </div>
+            </div>
+            
+            <a href="#subjects" class="btn" style="width: 100%; background: linear-gradient(135deg, var(--commerce), #8e44ad);">
+              <i class="fas fa-search"></i> Browse Intermediate Subjects
+            </a>
+          </div>
         </div>
         
-        <div class="feature-card">
-          <i class="fas fa-file-alt"></i>
-          <h3>Concise Summaries</h3>
-          <p>One-page summaries for quick revision before exams, covering all important topics.</p>
-        </div>
-        
-        <div class="feature-card">
-          <i class="fas fa-mobile-alt"></i>
-          <h3>Digital & Printable</h3>
-          <p>Access on any device or print high-quality PDFs for offline study.</p>
-        </div>
-        
-        <div class="feature-card">
-          <i class="fas fa-check-circle"></i>
-          <h3>Exam-Focused</h3>
-          <p>Materials designed specifically for board exam patterns and marking schemes.</p>
-        </div>
-        
-        <div class="feature-card">
-          <i class="fas fa-sync-alt"></i>
-          <h3>Regular Updates</h3>
-          <p>Content updated regularly according to latest syllabus and exam trends.</p>
+        <!-- University Card -->
+        <div class="level-card university">
+          <div class="level-header">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>University (Graduation)</h3>
+            <p>Bachelor's degree programs across all disciplines</p>
+          </div>
+          <div class="level-content">
+            <div class="subjects-list">
+              <h4><i class="fas fa-book"></i> Programs Offered</h4>
+              
+              <div class="subject-category">
+                <h5>Engineering</h5>
+                <ul>
+                  <li>Electrical</li>
+                  <li>Mechanical</li>
+                  <li>Civil</li>
+                  <li>Computer</li>
+                  <li>Software</li>
+                  <li>Chemical</li>
+                </ul>
+              </div>
+              
+              <div class="subject-category">
+                <h5>Medical</h5>
+                <ul>
+                  <li>MBBS</li>
+                  <li>BDS</li>
+                  <li>Pharmacy</li>
+                  <li>Nursing</li>
+                  <li>Biotechnology</li>
+                </ul>
+              </div>
+              
+              <div class="subject-category">
+                <h5>Business/CS</h5>
+                <ul>
+                  <li>BBA</li>
+                  <li>MBA</li>
+                  <li>CS/IT</li>
+                  <li>Commerce</li>
+                  <li>Economics</li>
+                  <li>Finance</li>
+                </ul>
+              </div>
+              
+              <div class="subject-category">
+                <h5>Social Sciences</h5>
+                <ul>
+                  <li>Psychology</li>
+                  <li>Sociology</li>
+                  <li>Political Science</li>
+                  <li>International Relations</li>
+                  <li>Mass Communication</li>
+                </ul>
+              </div>
+            </div>
+            
+            <a href="#subjects" class="btn" style="width: 100%; background: linear-gradient(135deg, var(--university), #d35400);">
+              <i class="fas fa-search"></i> Browse University Subjects
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -1109,14 +1316,25 @@
     <div class="container">
       <div class="section-title">
         <h2>Popular Subjects</h2>
-        <p>Choose from our wide range of subjects for Matric, Intermediate, and University levels</p>
+        <p>Browse our most requested subjects across all education levels</p>
       </div>
       
       <div class="subjects-filter">
-        <button class="subject-btn active" data-filter="all">All Subjects</button>
-        <button class="subject-btn" data-filter="science">Science</button>
-        <button class="subject-btn" data-filter="commerce">Commerce</button>
-        <button class="subject-btn" data-filter="arts">Arts</button>
+        <button class="filter-btn all active" data-filter="all">
+          <i class="fas fa-th"></i> All Subjects
+        </button>
+        <button class="filter-btn science" data-filter="science">
+          <i class="fas fa-flask"></i> Science
+        </button>
+        <button class="filter-btn commerce" data-filter="commerce">
+          <i class="fas fa-chart-line"></i> Commerce
+        </button>
+        <button class="filter-btn arts" data-filter="arts">
+          <i class="fas fa-paint-brush"></i> Arts
+        </button>
+        <button class="filter-btn university" data-filter="university">
+          <i class="fas fa-graduation-cap"></i> University
+        </button>
       </div>
       
       <div class="subjects-grid">
@@ -1125,17 +1343,20 @@
           <div class="subject-header">
             <i class="fas fa-atom"></i>
             <h3>Physics</h3>
-            <p>Matric & Intermediate</p>
+            <div>
+              <span class="level-badge level-9-10">Grade 9-10</span>
+              <span class="level-badge level-11-12">Inter</span>
+            </div>
           </div>
           <div class="subject-details">
             <ul>
               <li><i class="fas fa-check"></i> Complete Chapter Notes</li>
-              <li><i class="fas fa-check"></i> 15+ Visual Mind Maps</li>
+              <li><i class="fas fa-check"></i> 20+ Visual Mind Maps</li>
               <li><i class="fas fa-check"></i> Formula Sheets</li>
-              <li><i class="fas fa-check"></i> Solved Numericals</li>
-              <li><i class="fas fa-check"></i> Past Paper Solutions</li>
+              <li><i class="fas fa-check"></i> 150+ Solved Numericals</li>
+              <li><i class="fas fa-check"></i> Past Paper Solutions (10 years)</li>
             </ul>
-            <div class="subject-price">
+            <div class="subject-footer">
               <div class="price">Rs. 499<span>/subject</span></div>
               <a href="#contact" class="btn btn-small">Get Now</a>
             </div>
@@ -1147,17 +1368,20 @@
           <div class="subject-header">
             <i class="fas fa-flask"></i>
             <h3>Chemistry</h3>
-            <p>Matric & Intermediate</p>
+            <div>
+              <span class="level-badge level-9-10">Grade 9-10</span>
+              <span class="level-badge level-11-12">Inter</span>
+            </div>
           </div>
           <div class="subject-details">
             <ul>
               <li><i class="fas fa-check"></i> Complete Chapter Notes</li>
-              <li><i class="fas fa-check"></i> 20+ Chemical Reactions Maps</li>
+              <li><i class="fas fa-check"></i> 25+ Chemical Reactions Maps</li>
               <li><i class="fas fa-check"></i> Periodic Table Guides</li>
-              <li><i class="fas fa-check"></i> Organic Chemistry Charts</li>
-              <li><i class="fas fa-check"></i> Practical Guides</li>
+              <li><i class="fas fa-check"></i> Organic Chemistry Flowcharts</li>
+              <li><i class="fas fa-check"></i> Practical & Viva Guides</li>
             </ul>
-            <div class="subject-price">
+            <div class="subject-footer">
               <div class="price">Rs. 499<span>/subject</span></div>
               <a href="#contact" class="btn btn-small">Get Now</a>
             </div>
@@ -1169,17 +1393,20 @@
           <div class="subject-header">
             <i class="fas fa-dna"></i>
             <h3>Biology</h3>
-            <p>Matric & Intermediate</p>
+            <div>
+              <span class="level-badge level-9-10">Grade 9-10</span>
+              <span class="level-badge level-11-12">Inter</span>
+            </div>
           </div>
           <div class="subject-details">
             <ul>
               <li><i class="fas fa-check"></i> Complete Chapter Notes</li>
-              <li><i class="fas fa-check"></i> 25+ Diagram-Based Maps</li>
+              <li><i class="fas fa-check"></i> 30+ Diagram-Based Maps</li>
               <li><i class="fas fa-check"></i> Classification Charts</li>
               <li><i class="fas fa-check"></i> Process Flow Diagrams</li>
-              <li><i class="fas fa-check"></i> Terminologies List</li>
+              <li><i class="fas fa-check"></i> Terminologies & Definitions</li>
             </ul>
-            <div class="subject-price">
+            <div class="subject-footer">
               <div class="price">Rs. 499<span>/subject</span></div>
               <a href="#contact" class="btn btn-small">Get Now</a>
             </div>
@@ -1191,17 +1418,20 @@
           <div class="subject-header">
             <i class="fas fa-calculator"></i>
             <h3>Mathematics</h3>
-            <p>Matric & Intermediate</p>
+            <div>
+              <span class="level-badge level-9-10">Grade 9-10</span>
+              <span class="level-badge level-11-12">Inter</span>
+            </div>
           </div>
           <div class="subject-details">
             <ul>
               <li><i class="fas fa-check"></i> Complete Chapter Notes</li>
               <li><i class="fas fa-check"></i> Formula & Theorem Sheets</li>
-              <li><i class="fas fa-check"></i> 200+ Solved Problems</li>
+              <li><i class="fas fa-check"></i> 300+ Solved Problems</li>
               <li><i class="fas fa-check"></i> Shortcut Methods</li>
               <li><i class="fas fa-check"></i> Past Paper Solutions</li>
             </ul>
-            <div class="subject-price">
+            <div class="subject-footer">
               <div class="price">Rs. 499<span>/subject</span></div>
               <a href="#contact" class="btn btn-small">Get Now</a>
             </div>
@@ -1213,7 +1443,10 @@
           <div class="subject-header">
             <i class="fas fa-laptop-code"></i>
             <h3>Computer Science</h3>
-            <p>Matric & Intermediate</p>
+            <div>
+              <span class="level-badge level-9-10">Grade 9-10</span>
+              <span class="level-badge level-11-12">Inter</span>
+            </div>
           </div>
           <div class="subject-details">
             <ul>
@@ -1223,8 +1456,33 @@
               <li><i class="fas fa-check"></i> Solved Programs</li>
               <li><i class="fas fa-check"></i> Theory Summaries</li>
             </ul>
-            <div class="subject-price">
+            <div class="subject-footer">
               <div class="price">Rs. 499<span>/subject</span></div>
+              <a href="#contact" class="btn btn-small">Get Now</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Accounting -->
+        <div class="subject-card" data-category="commerce">
+          <div class="subject-header">
+            <i class="fas fa-file-invoice-dollar"></i>
+            <h3>Accounting</h3>
+            <div>
+              <span class="level-badge level-11-12">Inter</span>
+              <span class="level-badge level-university">University</span>
+            </div>
+          </div>
+          <div class="subject-details">
+            <ul>
+              <li><i class="fas fa-check"></i> Complete Notes</li>
+              <li><i class="fas fa-check"></i> Journal Entry Templates</li>
+              <li><i class="fas fa-check"></i> Balance Sheet Formats</li>
+              <li><i class="fas fa-check"></i> Solved Problems</li>
+              <li><i class="fas fa-check"></i> Financial Ratios Guide</li>
+            </ul>
+            <div class="subject-footer">
+              <div class="price">Rs. 599<span>/subject</span></div>
               <a href="#contact" class="btn btn-small">Get Now</a>
             </div>
           </div>
@@ -1235,7 +1493,10 @@
           <div class="subject-header">
             <i class="fas fa-chart-line"></i>
             <h3>Economics</h3>
-            <p>Intermediate & University</p>
+            <div>
+              <span class="level-badge level-11-12">Inter</span>
+              <span class="level-badge level-university">University</span>
+            </div>
           </div>
           <div class="subject-details">
             <ul>
@@ -1245,41 +1506,138 @@
               <li><i class="fas fa-check"></i> Case Studies</li>
               <li><i class="fas fa-check"></i> Important Definitions</li>
             </ul>
-            <div class="subject-price">
+            <div class="subject-footer">
               <div class="price">Rs. 599<span>/subject</span></div>
               <a href="#contact" class="btn btn-small">Get Now</a>
             </div>
           </div>
         </div>
+        
+        <!-- Business Studies -->
+        <div class="subject-card" data-category="commerce">
+          <div class="subject-header">
+            <i class="fas fa-briefcase"></i>
+            <h3>Business Studies</h3>
+            <div>
+              <span class="level-badge level-11-12">Inter</span>
+              <span class="level-badge level-university">University</span>
+            </div>
+          </div>
+          <div class="subject-details">
+            <ul>
+              <li><i class="fas fa-check"></i> Complete Notes</li>
+              <li><i class="fas fa-check"></i> Business Model Diagrams</li>
+              <li><i class="fas fa-check"></i> Case Study Analyses</li>
+              <li><i class="fas fa-check"></i> Management Principles</li>
+              <li><i class="fas fa-check"></i> Marketing Strategies</li>
+            </ul>
+            <div class="subject-footer">
+              <div class="price">Rs. 599<span>/subject</span></div>
+              <a href="#contact" class="btn btn-small">Get Now</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Software Engineering -->
+        <div class="subject-card" data-category="university">
+          <div class="subject-header">
+            <i class="fas fa-code"></i>
+            <h3>Software Engineering</h3>
+            <div>
+              <span class="level-badge level-university">University</span>
+            </div>
+          </div>
+          <div class="subject-details">
+            <ul>
+              <li><i class="fas fa-check"></i> Complete Course Notes</li>
+              <li><i class="fas fa-check"></i> UML Diagrams Collection</li>
+              <li><i class="fas fa-check"></i> SDLC Models</li>
+              <li><i class="fas fa-check"></i> Design Patterns</li>
+              <li><i class="fas fa-check"></i> Project Guidelines</li>
+            </ul>
+            <div class="subject-footer">
+              <div class="price">Rs. 799<span>/subject</span></div>
+              <a href="#contact" class="btn btn-small">Get Now</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Psychology -->
+        <div class="subject-card" data-category="arts">
+          <div class="subject-header">
+            <i class="fas fa-brain"></i>
+            <h3>Psychology</h3>
+            <div>
+              <span class="level-badge level-university">University</span>
+            </div>
+          </div>
+          <div class="subject-details">
+            <ul>
+              <li><i class="fas fa-check"></i> Complete Notes</li>
+              <li><i class="fas fa-check"></i> Theories & Models</li>
+              <li><i class="fas fa-check"></i> Case Studies</li>
+              <li><i class="fas fa-check"></i> Research Methods</li>
+              <li><i class="fas fa-check"></i> Famous Experiments</li>
+            </ul>
+            <div class="subject-footer">
+              <div class="price">Rs. 699<span>/subject</span></div>
+              <a href="#contact" class="btn btn-small">Get Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="#contact" class="btn">
+          <i class="fas fa-search"></i> Don't See Your Subject? Request Here
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- How It Works Section -->
-  <section class="process section-padding" id="process">
+  <!-- Features Section -->
+  <section class="features section-padding">
     <div class="container">
       <div class="section-title">
-        <h2>How It Works</h2>
-        <p>Get your premium study materials in just 3 simple steps</p>
+        <h2>What You Get</h2>
+        <p>Premium study materials designed for academic success</p>
       </div>
       
-      <div class="process-steps">
-        <div class="step">
-          <div class="step-number">1</div>
-          <h3>Select Your Subject</h3>
-          <p>Browse our collection and choose the subjects you need study materials for.</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <i class="fas fa-file-pdf"></i>
+          <h3>Digital PDF Notes</h3>
+          <p>High-quality, printable PDF notes with clear formatting and easy navigation.</p>
         </div>
         
-        <div class="step">
-          <div class="step-number">2</div>
-          <h3>Make Payment</h3>
-          <p>Choose your payment method (JazzCash, EasyPaisa, Bank Transfer).</p>
+        <div class="feature-card">
+          <i class="fas fa-project-diagram"></i>
+          <h3>Visual Mind Maps</h3>
+          <p>Color-coded mind maps to visualize relationships between concepts.</p>
         </div>
         
-        <div class="step">
-          <div class="step-number">3</div>
-          <h3>Download Materials</h3>
-          <p>Receive download links instantly after payment confirmation.</p>
+        <div class="feature-card">
+          <i class="fas fa-file-alt"></i>
+          <h3>Concise Summaries</h3>
+          <p>One-page summaries for quick revision before exams.</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-paste"></i>
+          <h3>Past Papers</h3>
+          <p>Solved past papers with detailed solutions and marking schemes.</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Mobile-Friendly</h3>
+          <p>Access materials on any device - phone, tablet, or computer.</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-sync-alt"></i>
+          <h3>Regular Updates</h3>
+          <p>Content updated regularly according to latest syllabus changes.</p>
         </div>
       </div>
     </div>
@@ -1289,23 +1647,67 @@
   <section class="testimonials section-padding" id="testimonials">
     <div class="container">
       <div class="section-title">
-        <h2>What Students Say</h2>
-        <p>Thousands of students have improved their grades with StudyWithUs materials</p>
+        <h2>Student Success Stories</h2>
+        <p>Thousands of students have improved their grades with StudyWithUs</p>
       </div>
       
-      <div class="testimonials-slider">
+      <div class="testimonials-grid">
         <div class="testimonial-card">
           <div class="testimonial-content">
-            The mind maps and summaries helped me revise the entire Physics syllabus in just 2 days before the exam. I scored 92% in Physics, thanks to StudyWithUs!
+            The Physics mind maps helped me visualize complex concepts. I revised the entire syllabus in 3 days before the exam and scored 94% in Physics!
           </div>
           <div class="testimonial-author">
-            <div class="author-avatar">
-              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Student">
-            </div>
+            <div class="author-avatar">AR</div>
             <div class="author-info">
               <h4>Ahmed Raza</h4>
               <p>F.Sc Pre-Engineering Student</p>
-              <p><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i></p>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            As a university student, the Software Engineering notes saved me hours of study time. The UML diagrams were exceptionally helpful for my finals.
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">SA</div>
+            <div class="author-info">
+              <h4>Sana Ali</h4>
+              <p>BS Software Engineering Student</p>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            The Chemistry organic reactions flowchart made remembering reactions so much easier. My score improved from 65% to 88% in just one month!
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">MK</div>
+            <div class="author-info">
+              <h4>Maria Khan</h4>
+              <p>Grade 10 Science Student</p>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
             </div>
           </div>
         </div>
@@ -1317,8 +1719,8 @@
   <section class="pricing section-padding" id="pricing">
     <div class="container">
       <div class="section-title">
-        <h2>Pricing Plans</h2>
-        <p>Choose the plan that best fits your study needs</p>
+        <h2>Flexible Pricing Plans</h2>
+        <p>Choose the plan that best fits your study needs and budget</p>
       </div>
       
       <div class="pricing-grid">
@@ -1326,7 +1728,7 @@
           <div class="pricing-header">
             <h3>Single Subject</h3>
             <div class="price">Rs. 499</div>
-            <p>One-time payment</p>
+            <p>One subject of your choice</p>
           </div>
           <ul class="pricing-features">
             <li><i class="fas fa-check"></i> Complete Notes (PDF)</li>
@@ -1334,40 +1736,43 @@
             <li><i class="fas fa-check"></i> Chapter Summaries</li>
             <li><i class="fas fa-check"></i> Digital Access</li>
             <li><i class="fas fa-check"></i> Printable Files</li>
+            <li><i class="fas fa-times"></i> Past Papers</li>
           </ul>
-          <a href="#contact" class="btn">Select Subject</a>
+          <a href="#contact" class="btn">Get Single Subject</a>
         </div>
         
         <div class="pricing-card popular">
           <div class="pricing-header">
-            <h3>Science Package</h3>
+            <h3>Complete Package</h3>
             <div class="price">Rs. 1,799</div>
-            <p>Save Rs. 497</p>
+            <p>Save Rs. 497 (4 subjects)</p>
           </div>
           <ul class="pricing-features">
-            <li><i class="fas fa-check"></i> Physics, Chemistry, Biology</li>
-            <li><i class="fas fa-check"></i> Mathematics (Optional)</li>
+            <li><i class="fas fa-check"></i> 4 Subjects of Your Choice</li>
             <li><i class="fas fa-check"></i> Complete Notes for all</li>
             <li><i class="fas fa-check"></i> 80+ Mind Maps</li>
+            <li><i class="fas fa-check"></i> Solved Past Papers</li>
             <li><i class="fas fa-check"></i> Priority Support</li>
+            <li><i class="fas fa-check"></i> Free Updates for 1 Year</li>
           </ul>
-          <a href="#contact" class="btn">Best Value</a>
+          <a href="#contact" class="btn">Get Complete Package</a>
         </div>
         
         <div class="pricing-card">
           <div class="pricing-header">
-            <h3>Commerce Package</h3>
-            <div class="price">Rs. 1,499</div>
-            <p>Save Rs. 497</p>
+            <h3>University Package</h3>
+            <div class="price">Rs. 2,499</div>
+            <p>For university students</p>
           </div>
           <ul class="pricing-features">
-            <li><i class="fas fa-check"></i> Accounting, Economics</li>
-            <li><i class="fas fa-check"></i> Business Studies</li>
-            <li><i class="fas fa-check"></i> Complete Notes for all</li>
-            <li><i class="fas fa-check"></i> 60+ Mind Maps</li>
+            <li><i class="fas fa-check"></i> 5 University Subjects</li>
+            <li><i class="fas fa-check"></i> Course Notes</li>
             <li><i class="fas fa-check"></i> Case Studies</li>
+            <li><i class="fas fa-check"></i> Research Guides</li>
+            <li><i class="fas fa-check"></i> Assignment Templates</li>
+            <li><i class="fas fa-check"></i> Presentation Slides</li>
           </ul>
-          <a href="#contact" class="btn">Get Package</a>
+          <a href="#contact" class="btn">Get University Package</a>
         </div>
       </div>
     </div>
@@ -1377,15 +1782,25 @@
   <section class="free-resources section-padding" id="free-resources">
     <div class="container">
       <div class="section-title">
-        <h2>Get Free Samples</h2>
-        <p>Download free sample notes and mind maps before you buy</p>
+        <h2>Download Free Samples</h2>
+        <p>Try before you buy! Download free sample notes and mind maps</p>
       </div>
       
       <div class="resources-form">
         <form id="sampleForm">
           <div class="form-group">
-            <label for="subjectSelect">Select Subject for Sample</label>
-            <select id="subjectSelect" required>
+            <label for="educationLevel">Select Education Level</label>
+            <select id="educationLevel" required>
+              <option value="">Choose your level</option>
+              <option value="grade9-10">Grade 9-10 (Matric)</option>
+              <option value="intermediate">Intermediate (FSc/FA)</option>
+              <option value="university">University (Graduation)</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="sampleSubject">Select Subject for Sample</label>
+            <select id="sampleSubject" required>
               <option value="">Choose a subject</option>
               <option value="physics">Physics</option>
               <option value="chemistry">Chemistry</option>
@@ -1393,84 +1808,24 @@
               <option value="math">Mathematics</option>
               <option value="computer">Computer Science</option>
               <option value="economics">Economics</option>
+              <option value="accounting">Accounting</option>
+              <option value="software">Software Engineering</option>
             </select>
           </div>
           
           <div class="form-group">
-            <label for="email">Your Email Address</label>
-            <input type="email" id="email" placeholder="Enter your email" required>
+            <label for="sampleEmail">Your Email Address</label>
+            <input type="email" id="sampleEmail" placeholder="Enter your email" required>
           </div>
           
           <button type="submit" class="btn" style="width: 100%;">
-            <i class="fas fa-download"></i> Download Free Samples
+            <i class="fas fa-download"></i> Download Free Samples Now
           </button>
           
-          <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8;">
-            You'll receive download links for 3 sample chapters + 2 mind maps
+          <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8; text-align: center;">
+            You'll receive: 3 sample chapters + 2 mind maps + 1 summary PDF
           </p>
         </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="faq section-padding" id="faq">
-    <div class="container">
-      <div class="section-title">
-        <h2>Frequently Asked Questions</h2>
-        <p>Find answers to common questions about StudyWithUs</p>
-      </div>
-      
-      <div class="faq-container">
-        <div class="faq-item active">
-          <div class="faq-question">
-            What payment methods do you accept?
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            We accept JazzCash, EasyPaisa, and Bank Transfer in Pakistan. International students can pay via PayPal.
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <div class="faq-question">
-            How do I receive the study materials after payment?
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            After payment confirmation, you'll receive download links via email within 1-2 hours. You can download PDF files and access them on any device.
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <div class="faq-question">
-            Can I print the study materials?
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            Yes! All materials are provided as high-quality PDF files that are optimized for printing. You can print them at home or at a printing shop.
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <div class="faq-question">
-            Are the materials updated for the current syllabus?
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            Absolutely! We update our materials every year according to the latest syllabus changes and exam patterns.
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <div class="faq-question">
-            Do you offer refunds?
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            Due to the digital nature of our products, we don't offer refunds. However, you can download free samples before purchasing to ensure our materials meet your needs.
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -1480,66 +1835,65 @@
     <div class="container">
       <div class="section-title">
         <h2>Get In Touch</h2>
-        <p>Have questions? Contact us for more information</p>
+        <p>Contact us for inquiries, custom packages, or special requests</p>
       </div>
       
-      <div class="contact-wrapper">
-        <div class="contact-info">
-          <h3>Contact Information</h3>
-          <p>We're here to help you with your study needs. Reach out to us through any of the following channels.</p>
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div style="background: white; padding: 40px; border-radius: var(--border-radius); box-shadow: var(--shadow);">
+          <div style="text-align: center; margin-bottom: 30px;">
+            <h3 style="color: var(--primary); margin-bottom: 10px;">Contact Information</h3>
+            <p style="color: var(--gray);">Choose your preferred method to reach us</p>
+          </div>
           
-          <div class="contact-details">
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <div>
-                <h4>Email</h4>
-                <p>support@studywithus.pk</p>
-                <p>sales@studywithus.pk</p>
-              </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 40px;">
+            <div style="text-align: center; padding: 20px; background: #f8fafc; border-radius: var(--border-radius-sm);">
+              <i class="fas fa-phone" style="font-size: 2rem; color: var(--secondary); margin-bottom: 15px;"></i>
+              <h4 style="margin-bottom: 10px;">Call / WhatsApp</h4>
+              <p>+92 300 1234567</p>
+              <p>+92 321 9876543</p>
+              <a href="https://wa.me/923001234567" class="btn btn-small" style="margin-top: 15px; background: #25D366;">
+                <i class="fab fa-whatsapp"></i> WhatsApp Now
+              </a>
             </div>
             
-            <div class="contact-item">
-              <i class="fas fa-phone"></i>
-              <div>
-                <h4>Phone / WhatsApp</h4>
-                <p>+92 344 7371655</p>
-              </div>
+            <div style="text-align: center; padding: 20px; background: #f8fafc; border-radius: var(--border-radius-sm);">
+              <i class="fas fa-envelope" style="font-size: 2rem; color: var(--secondary); margin-bottom: 15px;"></i>
+              <h4 style="margin-bottom: 10px;">Email</h4>
+              <p>support@studywithus.pk</p>
+              <p>orders@studywithus.pk</p>
+              <a href="mailto:support@studywithus.pk" class="btn btn-small" style="margin-top: 15px;">
+                <i class="fas fa-envelope"></i> Send Email
+              </a>
             </div>
             
-            <div class="contact-item">
-              <i class="fas fa-clock"></i>
-              <div>
-                <h4>Business Hours</h4>
-                <p>Monday - Friday: 9 AM - 6 PM</p>
-                <p>Saturday: 10 AM - 4 PM</p>
-              </div>
+            <div style="text-align: center; padding: 20px; background: #f8fafc; border-radius: var(--border-radius-sm);">
+              <i class="fas fa-clock" style="font-size: 2rem; color: var(--secondary); margin-bottom: 15px;"></i>
+              <h4 style="margin-bottom: 10px;">Business Hours</h4>
+              <p>Mon-Fri: 9 AM - 6 PM</p>
+              <p>Sat: 10 AM - 4 PM</p>
+              <p>Sun: By Appointment</p>
             </div>
           </div>
+          
+          <div style="text-align: center;">
+            <h4 style="margin-bottom: 20px; color: var(--primary);">Payment Methods</h4>
+            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 30px;">
+              <div style="padding: 10px 20px; background: #f1f8ff; border-radius: 20px; color: #0066cc;">
+                <i class="fas fa-mobile-alt"></i> JazzCash
+              </div>
+              <div style="padding: 10px 20px; background: #f0f9ff; border-radius: 20px; color: #00a859;">
+                <i class="fas fa-mobile-alt"></i> EasyPaisa
+              </div>
+              <div style="padding: 10px 20px; background: #fff8f0; border-radius: 20px; color: #ff9900;">
+                <i class="fas fa-university"></i> Bank Transfer
+              </div>
+            </div>
+            
+            <a href="#free-resources" class="btn">
+              <i class="fas fa-download"></i> Get Free Samples First
+            </a>
+          </div>
         </div>
-        
-        <form class="contact-form" id="contactForm">
-          <h3>Quick Inquiry</h3>
-          <input type="text" placeholder="Your Name" required>
-          <input type="email" placeholder="Your Email" required>
-          <input type="text" placeholder="Phone Number">
-          
-          <select required>
-            <option value="">Select Subject</option>
-            <option value="physics">Physics</option>
-            <option value="chemistry">Chemistry</option>
-            <option value="biology">Biology</option>
-            <option value="math">Mathematics</option>
-            <option value="computer">Computer Science</option>
-            <option value="economics">Economics</option>
-            <option value="other">Other</option>
-          </select>
-          
-          <textarea placeholder="Your Message / Specific Requirements" rows="5" required></textarea>
-          
-          <button type="submit" class="btn">
-            <i class="fas fa-paper-plane"></i> Send Message
-          </button>
-        </form>
       </div>
     </div>
   </section>
@@ -1550,53 +1904,62 @@
       <div class="footer-grid">
         <div class="footer-col">
           <h4>Study<span>WithUs</span></h4>
-          <p>Pakistan's first complete study hub providing premium quality notes, mind maps, and summaries for all subjects in one place.</p>
+          <p>Your complete study solution from Grade 9 to University Graduation. Premium quality notes, mind maps, and summaries for academic success.</p>
           <div class="social-links">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-whatsapp"></i></a>
             <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
           </div>
         </div>
         
         <div class="footer-col">
-          <h4>Quick Links</h4>
+          <h4>Education Levels</h4>
           <ul class="footer-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#subjects">Subjects</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#levels">Grade 9-10 (Matric)</a></li>
+            <li><a href="#levels">Intermediate (FSc)</a></li>
+            <li><a href="#levels">Intermediate (FA)</a></li>
+            <li><a href="#levels">ICS / ICom</a></li>
+            <li><a href="#levels">University (Graduation)</a></li>
           </ul>
         </div>
         
         <div class="footer-col">
-          <h4>Subjects</h4>
+          <h4>Popular Subjects</h4>
           <ul class="footer-links">
             <li><a href="#subjects">Physics</a></li>
             <li><a href="#subjects">Chemistry</a></li>
             <li><a href="#subjects">Biology</a></li>
             <li><a href="#subjects">Mathematics</a></li>
             <li><a href="#subjects">Computer Science</a></li>
+            <li><a href="#subjects">Accounting</a></li>
+            <li><a href="#subjects">Economics</a></li>
           </ul>
         </div>
         
         <div class="footer-col">
-          <h4>Newsletter</h4>
-          <p>Subscribe to get updates on new subjects and special offers.</p>
-          <div class="newsletter-form">
-            <input type="email" placeholder="Your Email Address">
-            <button type="submit" class="btn btn-small" style="width: 100%;">Subscribe</button>
-          </div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#levels">Education Levels</a></li>
+            <li><a href="#subjects">Browse Subjects</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#free-resources">Free Samples</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
         </div>
       </div>
       
       <div class="copyright">
-        <p>&copy; 2026 StudyWithUs. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--accent);"></i> for students</p>
+        <p>&copy; 2025 StudyWithUs. All rights reserved. | Serving students from Grade 9 to University Graduation</p>
         <p style="margin-top: 10px; font-size: 0.8rem;">
           <a href="#" style="color: rgba(255,255,255,0.6); margin: 0 10px;">Privacy Policy</a> | 
           <a href="#" style="color: rgba(255,255,255,0.6); margin: 0 10px;">Terms of Service</a> | 
           <a href="#" style="color: rgba(255,255,255,0.6); margin: 0 10px;">Refund Policy</a>
+        </p>
+        <p style="margin-top: 10px; font-size: 0.8rem; color: rgba(255,255,255,0.4);">
+          Instagram: @studywithus | WhatsApp: +92 300 1234567
         </p>
       </div>
     </div>
@@ -1635,35 +1998,30 @@
       });
       
       // Subjects Filter
-      const subjectButtons = document.querySelectorAll('.subject-btn');
+      const filterButtons = document.querySelectorAll('.filter-btn');
       const subjectCards = document.querySelectorAll('.subject-card');
       
-      subjectButtons.forEach(button => {
+      filterButtons.forEach(button => {
         button.addEventListener('click', function() {
           // Remove active class from all buttons
-          subjectButtons.forEach(btn => btn.classList.remove('active'));
+          filterButtons.forEach(btn => btn.classList.remove('active'));
           // Add active class to clicked button
           this.classList.add('active');
           
           const filterValue = this.getAttribute('data-filter');
           
           subjectCards.forEach(card => {
-            if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+            if (filterValue === 'all') {
               card.style.display = 'block';
             } else {
-              card.style.display = 'none';
+              const categories = card.getAttribute('data-category').split(' ');
+              if (categories.includes(filterValue)) {
+                card.style.display = 'block';
+              } else {
+                card.style.display = 'none';
+              }
             }
           });
-        });
-      });
-      
-      // FAQ Accordion
-      const faqQuestions = document.querySelectorAll('.faq-question');
-      
-      faqQuestions.forEach(question => {
-        question.addEventListener('click', function() {
-          const faqItem = this.parentElement;
-          faqItem.classList.toggle('active');
         });
       });
       
@@ -1673,40 +2031,17 @@
         sampleForm.addEventListener('submit', function(e) {
           e.preventDefault();
           
-          const subject = document.getElementById('subjectSelect').value;
-          const email = document.getElementById('email').value;
+          const level = document.getElementById('educationLevel').value;
+          const subject = document.getElementById('sampleSubject').value;
+          const email = document.getElementById('sampleEmail').value;
           
-          if (!subject || !email) {
-            alert('Please select a subject and enter your email address.');
+          if (!level || !subject || !email) {
+            alert('Please fill in all fields to download free samples.');
             return;
           }
           
-          // In a real implementation, you would send this data to a server
-          // For now, we'll show a success message
-          alert('Thank you! Download links for ' + subject + ' samples have been sent to ' + email + '. Please check your email (including spam folder).');
-          this.reset();
-        });
-      }
-      
-      // Contact Form Submission
-      const contactForm = document.getElementById('contactForm');
-      if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-          e.preventDefault();
-          
-          // Get form data
-          const name = this.querySelector('input[type="text"]').value;
-          const email = this.querySelector('input[type="email"]').value;
-          const subject = this.querySelector('select').value;
-          const message = this.querySelector('textarea').value;
-          
-          if (!name || !email || !subject || !message) {
-            alert('Please fill in all required fields.');
-            return;
-          }
-          
-          // In a real implementation, you would send this data to a server
-          alert('Thank you for your inquiry, ' + name + '! We will contact you within 24 hours at ' + email + ' regarding ' + subject + '.');
+          // In real implementation, send to server
+          alert(`Thank you! Download links for ${subject} (${level}) samples have been sent to ${email}. Please check your email.`);
           this.reset();
         });
       }
@@ -1734,6 +2069,16 @@
       if (window.scrollY > 100) {
         header.classList.add('scrolled');
       }
+      
+      // Add WhatsApp redirection
+      document.querySelectorAll('a[href*="whatsapp"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const phone = this.getAttribute('href').split('/').pop();
+          const message = "Hello! I'm interested in StudyWithUs materials. Can you please provide more information?";
+          window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
+        });
+      });
     });
   </script>
 </body>
